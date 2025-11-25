@@ -9,7 +9,10 @@ import java.util.List;
 import vn.iotstart.connection.DBConnectionMySQL;
 import vn.iotstart.dao.CategoryDao;
 import vn.iotstart.model.Category;
+<<<<<<< HEAD
+=======
 import vn.iotstart.model.User;
+>>>>>>> origin/master
 
 public class CategoryDaoImpl implements CategoryDao {
     
@@ -20,10 +23,14 @@ public class CategoryDaoImpl implements CategoryDao {
     @Override
     public List<Category> getAll() {
         List<Category> categories = new ArrayList<Category>();
+<<<<<<< HEAD
+        String sql = "SELECT * FROM category";
+=======
         // JOIN bảng users để lấy tên người tạo (hiển thị cho Admin)
         // Lưu ý: Giả sử khóa ngoại là 'user_id' trong bảng category và 'user_id' trong bảng users
         String sql = "SELECT c.*, u.fullname, u.username FROM category c LEFT JOIN users u ON c.user_id = u.user_id";
         
+>>>>>>> origin/master
         try {
             conn = new DBConnectionMySQL().getConnection();
             ps = conn.prepareStatement(sql);
@@ -33,6 +40,8 @@ public class CategoryDaoImpl implements CategoryDao {
                 category.setCateId(rs.getInt("cate_id"));
                 category.setCateName(rs.getString("cate_name"));
                 category.setIcons(rs.getString("icons"));
+<<<<<<< HEAD
+=======
                 
                 // MAP USER VÀO CATEGORY
                 User user = new User();
@@ -72,6 +81,7 @@ public class CategoryDaoImpl implements CategoryDao {
                 user.setUserId(userId);
                 category.setUser(user);
                 
+>>>>>>> origin/master
                 categories.add(category);
             }
             conn.close();
@@ -94,6 +104,8 @@ public class CategoryDaoImpl implements CategoryDao {
                 category.setCateId(rs.getInt("cate_id"));
                 category.setCateName(rs.getString("cate_name"));
                 category.setIcons(rs.getString("icons"));
+<<<<<<< HEAD
+=======
                 
                 // Lấy ID người tạo ra
                 int creatorId = rs.getInt("user_id");
@@ -101,6 +113,7 @@ public class CategoryDaoImpl implements CategoryDao {
                 user.setUserId(creatorId);
                 category.setUser(user);
                 
+>>>>>>> origin/master
                 return category;
             }
             conn.close();
@@ -112,13 +125,19 @@ public class CategoryDaoImpl implements CategoryDao {
 
     @Override
     public void insert(Category category) {
+<<<<<<< HEAD
+        String sql = "INSERT INTO category(cate_name, icons) VALUES (?, ?)";
+=======
         // CẬP NHẬT CÂU INSERT: Thêm user_id
         String sql = "INSERT INTO category(cate_name, icons, user_id) VALUES (?, ?, ?)";
+>>>>>>> origin/master
         try {
             conn = new DBConnectionMySQL().getConnection();
             ps = conn.prepareStatement(sql);
             ps.setString(1, category.getCateName());
             ps.setString(2, category.getIcons());
+<<<<<<< HEAD
+=======
             
             // Lấy userId từ đối tượng User lồng bên trong Category
             if (category.getUser() != null) {
@@ -127,6 +146,7 @@ public class CategoryDaoImpl implements CategoryDao {
                 ps.setNull(3, java.sql.Types.INTEGER);
             }
             
+>>>>>>> origin/master
             ps.executeUpdate();
             conn.close();
         } catch (Exception e) {
@@ -136,7 +156,10 @@ public class CategoryDaoImpl implements CategoryDao {
 
     @Override
     public void edit(Category category) {
+<<<<<<< HEAD
+=======
         // Edit thường không đổi người tạo, giữ nguyên logic cũ
+>>>>>>> origin/master
         String sql = "UPDATE category SET cate_name = ?, icons = ? WHERE cate_id = ?";
         try {
             conn = new DBConnectionMySQL().getConnection();

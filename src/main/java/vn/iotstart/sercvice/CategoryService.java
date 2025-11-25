@@ -10,8 +10,11 @@ public interface CategoryService {
     void edit(Category category);
     void delete(int id);
     List<Category> search(String keyword);
+<<<<<<< HEAD
+=======
     
     // --- BỔ SUNG MỚI ---
     // Tìm danh mục theo ID người tạo (cho chức năng Manager)
     List<Category> findByCreatorId(int userId);
+>>>>>>> origin/master
 }

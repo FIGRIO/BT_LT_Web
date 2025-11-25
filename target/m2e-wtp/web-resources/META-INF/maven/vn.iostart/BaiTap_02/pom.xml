@@ -1,23 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>vn.iostart</groupId>
-<<<<<<< HEAD
   <artifactId>BaiTap_02</artifactId>
   <version>1.1.0</version>
   <packaging>war</packaging>
-=======
-  <artifactId>Practice</artifactId>
-  <version>1.1.0</version>
-  <packaging>war</packaging>
-  <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        
-        <jakarta.persistence.version>3.1.0</jakarta.persistence.version>
-        <hibernate.version>6.6.0.Final</hibernate.version> <lombok.version>1.18.30</lombok.version>
-    </properties>
->>>>>>> origin/master
   <dependencies>
   	<!--https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
 		<dependency>
@@ -89,7 +75,6 @@
 			<artifactId>commons-io</artifactId>
 			<version>2.11.0</version>
 		</dependency>
-<<<<<<< HEAD
 	</dependencies>
   <build><pluginManagement>
       <plugins>
@@ -113,67 +98,4 @@
       </plugins>
     </pluginManagement>
     </build>
-=======
-		
-			<!-- Jakarta Persistence API -->
-	    <dependency>
-	      <groupId>jakarta.persistence</groupId>
-	      <artifactId>jakarta.persistence-api</artifactId>
-	      <version>${jakarta.persistence.version}</version>
-	    </dependency>
-	
-	    <!-- Hibernate Core -->
-	    <dependency>
-	      <groupId>org.hibernate.orm</groupId>
-	      <artifactId>hibernate-core</artifactId>
-	      <version>${hibernate.version}</version>
-	    </dependency>
-	
-	    <!-- Hibernate Validator (optional) -->
-	    <dependency>
-	      <groupId>org.hibernate.validator</groupId>
-	      <artifactId>hibernate-validator</artifactId>
-	      <version>9.1.0.Final</version>
-	    </dependency>
-	
-	    <!-- Lombok -->
-	    <dependency>
-	      <groupId>org.projectlombok</groupId>
-	      <artifactId>lombok</artifactId>
-	      <version>${lombok.version}</version>
-	      <scope>provided</scope>
-	    </dependency>
-	</dependencies>
-  <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.13.0</version>
-                    <configuration>
-                        <source>${maven.compiler.source}</source>
-                        <target>${maven.compiler.target}</target>
-                        <annotationProcessorPaths>
-                            <path>
-                                <groupId>org.projectlombok</groupId>
-                                <artifactId>lombok</artifactId>
-                                <version>${lombok.version}</version>
-                            </path>
-                        </annotationProcessorPaths>
-                    </configuration>
-                </plugin>
-
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <version>3.4.0</version>
-                    <configuration>
-                        <failOnMissingWebXml>false</failOnMissingWebXml>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-        </build>
->>>>>>> origin/master
 </project>

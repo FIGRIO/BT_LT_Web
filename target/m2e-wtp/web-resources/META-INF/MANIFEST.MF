@@ -1,4 +1,8 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
+Java-Version: 17
+=======
+>>>>>>> origin/master
 Build-Jdk-Spec: 21
 Created-By: Maven Integration for Eclipse
 
