@@ -21,7 +21,11 @@ public class Email {
 	public boolean sendEmail(User user) {
 		boolean test = false;
 		String toEmail = user.getEmail();
+<<<<<<< HEAD
 		String fromEmail = "figrio@gmail.com";
+=======
+		String fromEmail = "figrio11405@gmail.com";
+>>>>>>> origin/master
 		String password = "123";
 		try {
 			Properties pr = configEmail(new Properties());

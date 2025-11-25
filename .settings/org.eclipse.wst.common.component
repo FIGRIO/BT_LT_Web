@@ -2,7 +2,11 @@
                 
     
     
+<<<<<<< HEAD
     <wb-module deploy-name="BaiTap_02-1.1.0">
+=======
+    <wb-module deploy-name="Practice-1.1.0">
+>>>>>>> origin/master
                                 
         
         
@@ -19,15 +23,23 @@
         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+<<<<<<< HEAD
                                 
         
         
+=======
+>>>>>>> origin/master
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/target/generated-sources/annotations"/>
                                 
         
         
         <property name="java-output-path" value="/Practice/target/classes"/>
+<<<<<<< HEAD
         <property name="context-root" value="BaiTap_02"/>
+=======
+                
+        <property name="context-root" value="Practice"/>
+>>>>>>> origin/master
                             
     
     

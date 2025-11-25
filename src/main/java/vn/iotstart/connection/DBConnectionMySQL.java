@@ -9,7 +9,11 @@ import java.util.logging.Logger;
 
 public class DBConnectionMySQL {
 
+<<<<<<< HEAD
     private static String DB_URL = "jdbc:mysql://localhost:3306/db";
+=======
+	private static String DB_URL = "jdbc:mysql://localhost:3306/db";
+>>>>>>> origin/master
     private static String USER_NAME = "root";
     private static String PASSWORD = "123456";
     private static Connection con;

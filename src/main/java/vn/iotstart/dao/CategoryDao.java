@@ -10,4 +10,11 @@ public interface CategoryDao {
     void edit(Category category);
     void delete(int id);
     List<Category> search(String keyword);
+<<<<<<< HEAD
+=======
+    
+    // --- BỔ SUNG ---
+    // Hàm tìm danh mục theo ID người tạo (Dùng cho Manager)
+    List<Category> findByCreatorId(int userId);
+>>>>>>> origin/master
 }
